@@ -20,9 +20,8 @@ app.use(express.json());
 
 // CORS Configuration - Allow both local development and Vercel deployment
 const allowedOrigins = [
-    'http://localhost:5173',      // Local Vite dev
-    'http://localhost:3000',      // Local alternative
-    'https://salonshop.vercel.app' // Vercel production
+       // Local alternative
+    'https://projectsalonshop.vercel.app' // Vercel production
 ];
 
 app.use(cors({
