@@ -12,10 +12,10 @@ const app = express();
    CORS (PRODUCTION ONLY)
 ======================= */
 app.use(
-  cors({
-    origin: "https://projectsalonshop.vercel.app",
-    credentials: true
-  })
+   cors({
+      origin: ["https://projectsalonshop.vercel.app", "http://localhost:5173"],
+      credentials: true
+   })
 );
 
 // Preflight
@@ -40,7 +40,7 @@ app.use("/api/v1", v1Routes);
    HEALTH CHECK
 ======================= */
 app.get("/", (req, res) => {
-  res.status(200).send("Salon E-Commerce API is running 🚀");
+   res.status(200).send("Salon E-Commerce API is running 🚀");
 });
 
 /* =======================
@@ -49,5 +49,5 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
+   console.log(`✅ Server running on port ${PORT}`);
 });

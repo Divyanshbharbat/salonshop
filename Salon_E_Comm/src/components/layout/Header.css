@@ -3,7 +3,7 @@
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -11,7 +11,7 @@
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
   font-size: 13px;
-  padding: 10px 0;
+  padding: 4px 0;
 }
 
 .header-top-content {
@@ -47,11 +47,6 @@
 
 .separator {
   opacity: 0.5;
-}
-
-.header-main {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .header-content {
@@ -123,8 +118,6 @@
 
 .search-btn {
   border: none;
-  background: none;
-  padding: 0 16px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -143,7 +136,7 @@
 }
 
 .btn-login {
-  padding: 8px 16px;
+  padding: 8px 2%;
   background: none;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
@@ -241,43 +234,8 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.navbar {
-  display: flex;
-  gap: 32px;
-  padding: 12px 0;
-  list-style: none;
-}
+/* Navbar styles moved to Tailwind in Header.jsx */
 
-.nav-item {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: none;
-  border: none;
-  transition: all 0.3s ease;
-  position: relative;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.nav-item:hover {
-  color: var(--primary-color);
-}
-
-.nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  transition: width 0.3s ease;
-}
-
-.nav-item:hover::after {
-  width: 100%;
-}
 
 @media (max-width: 1024px) {
   .header-content {
